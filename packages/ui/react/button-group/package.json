@@ -1,0 +1,81 @@
+{
+  "name": "@emryui/react-button-group",
+  "version": "0.0.3-alpha",
+  "license": "MIT",
+  "description": "Emry UI React button group component",
+  "author": "Emry UI <emryui@proton.me>",
+  "homepage": "https://emryui.com",
+  "source": "./src/index.ts",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/",
+    "directory": "./dist"
+  },
+  "targets": {
+    "main": {
+      "optimize": true
+    },
+    "module": {
+      "optimize": true
+    }
+  },
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "clean": "rm -rf dist",
+    "version": "yarn version",
+    "build": "parcel build src/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thmsmtylr/emry-ui.git"
+  },
+  "peerDependencies": {
+    "@types/react": "*",
+    "@types/react-dom": "*",
+    "react": "^16.8 || ^17.0 || ^18.0",
+    "react-dom": "^16.8 || ^17.0 || ^18.0"
+  },
+  "peerDependenciesMeta": {
+    "@types/react": {
+      "optional": true
+    },
+    "@types/react-dom": {
+      "optional": true
+    }
+  },
+  "dependencies": {
+    "@radix-ui/react-toggle-group": "^1.0.4"
+  },
+  "devDependencies": {
+    "@parcel/transformer-typescript-types": "2.9.3",
+    "typescript": ">=3.0.0"
+  },
+  "keywords": [
+    "Emry UI",
+    "Emry UI button group",
+    "Tailwind",
+    "css",
+    "button group",
+    "react",
+    "typescript"
+  ]
+}
