@@ -22,3 +22,4 @@ RUN apk add --no-cache --virtual .build-deps \
   && npm install \
   && npm cache clean --force \
   && apk del .build-deps
+RUN npm install turbo --global
